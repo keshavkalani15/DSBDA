@@ -13,15 +13,17 @@ spark-shell # This will start scala CLI
 
 import scala.io.StdIn
 
-object AddTwoNumbers {
-  def main(args: Array[String]): Unit = {
-    println("Enter the first number:")
-    val num1 = StdIn.readInt()
-    println("Enter the second number:")
-    val num2 = StdIn.readInt()
-    val sum = num1 + num2
-    println(s"The sum of $num1 and $num2 is $sum")
-  }
+object addtwonumbers {
+    def main(args: Array[String]): Unit = {
+        println("Enter First Number: ")
+        val num1 = StdIn.readInt()
+        println("Enter Second Number: ")
+        val num2 = StdIn.readInt()
+        
+        val sum = num1 + num2
+        
+        println(s"Sum of Number $num1 and $num2 is $sum")
+    }
 }
 
 > Exit paste mode: ctrl + d
@@ -46,22 +48,7 @@ object EvenOddCheck {
   }
 }
 
-
-2. Factorial
-
-object Factorial {
-  def main(args: Array[String]): Unit = {
-    val num = 5
-    var factorial = 1
-    for (i <- 1 to num) {
-      factorial *= i
-    }
-    println(s"The factorial of $num is $factorial")
-  }
-}
-
-
-3. String reversal
+2. String reversal
 
 object ReverseString {
   def main(args: Array[String]): Unit = {
@@ -70,6 +57,19 @@ object ReverseString {
     println(s"The reverse of '$str' is '$reversed'")
   }
 }
+
+
+3. Sum of two numbers
+
+object SumOfTwoNumbers {
+  def main(args: Array[String]): Unit = {
+    val num1 = 10
+    val num2 = 20
+    val sum = num1 + num2
+    println(s"The sum of $num1 and $num2 is $sum")
+  }
+}
+
 
 
 4. Find largest element in an array
@@ -83,19 +83,7 @@ object FindLargest {
 }
 
 
-5. Sum of two numbers
-
-object SumOfTwoNumbers {
-  def main(args: Array[String]): Unit = {
-    val num1 = 10
-    val num2 = 20
-    val sum = num1 + num2
-    println(s"The sum of $num1 and $num2 is $sum")
-  }
-}
-
-
-6. Sum of two numbers (with user input)
+5. Sum of two numbers (with user input)
 
 import scala.io.StdIn
 
@@ -112,29 +100,15 @@ object AddTwoNumbers {
 }
 
 
-7. Simple Calculator
+6. Factorial
 
-import scala.io.StdIn
-
-object SimpleCalculator {
+object Factorial {
   def main(args: Array[String]): Unit = {
-    println("Enter the first number:")
-    val num1 = StdIn.readDouble()
-    println("Enter an operator (+, -, *, /):")
-    val operator = StdIn.readChar()
-    println("Enter the second number:")
-    val num2 = StdIn.readDouble()
-
-    val result = operator match {
-      case '+' => num1 + num2
-      case '-' => num1 - num2
-      case '*' => num1 * num2
-      case '/' => if (num2 != 0) num1 / num2 else "undefined (division by zero)"
-      case _ => "Invalid operator"
+    val num = 5
+    var factorial = 1
+    for (i <- 1 to num) {
+      factorial *= i
     }
-
-    println(s"The result is: $result")
+    println(s"The factorial of $num is $factorial")
   }
 }
-
-
