@@ -24,11 +24,11 @@ print("\nMissing Values:")
 print(df.isnull().sum())
 
 # Fill Missing Values
-df['Math'].fillna(df['Math'].mean(), inplace=True)
+df['Math'].fillna(df['Math'].mean())
 
-df['Science'].fillna(df['Science'].mean(), inplace=True)
+df['Science'].fillna(df['Science'].mean())
 
-df['Attendance'].fillna(df['Attendance'].mean(), inplace=True)
+df['Attendance'].fillna(df['Attendance'].mean())
 
 # Handle Inconsistencies
 df.loc[df['Math'] > 100, 'Math'] = 100
