@@ -14,7 +14,7 @@ print("\nDataset Information:")
 print(titanic.info())
 
 # Pattern Visualization using Seaborn
-sns.countplot(x='survived', data=titanic)
+sns.countplot(x='survived', hue='Sex', data=titanic)
 plt.title("Survival Count")
 plt.show()
 

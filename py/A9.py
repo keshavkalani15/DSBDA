@@ -12,7 +12,7 @@ print(titanic.head())
 # Boxplot
 sns.boxplot(x='sex', y='age', hue='survived', data=titanic)
 plt.title("Age Distribution by Gender and Survival")
-plt.show()
+plt.show()  
 
 #optional
 sns.violinplot(x='sex',y='age',data=titanic, hue= 'survived')
