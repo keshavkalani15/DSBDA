@@ -1,15 +1,16 @@
 import pandas as pd
 import numpy as np
-from sklearn.datasets import load_iris
 from sklearn.model_selection import train_test_split
 from sklearn.naive_bayes import GaussianNB
 from sklearn.metrics import confusion_matrix
 
 # Load Dataset
-iris = load_iris()
+df = pd.read_csv(r"C:\Users\Keshav Kalani\Desktop\DSBDA\datasets\IRIS.csv")
+df.head()
 
-X = iris.data
-y = iris.target
+# Input and Output Variables
+X = df[['sepal_length', 'sepal_width', 'petal_length', 'petal_width']]
+y = df['species']
 
 # Split Dataset
 X_train, X_test, y_train, y_test = train_test_split(
