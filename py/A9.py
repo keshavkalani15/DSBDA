@@ -1,8 +1,9 @@
 import seaborn as sns
 import matplotlib.pyplot as plt
+import pandas as pd
 
 # Load Dataset
-titanic = sns.load_dataset('titanic')
+titanic = pd.read_csv('Titanic-Dataset.csv')
 
 # Display First 5 Rows
 print("First 5 Rows:")

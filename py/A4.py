@@ -6,9 +6,7 @@ from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error
 
 # Load Dataset
-boston = fetch_openml(name='boston', version=1, as_frame=True)
-
-df = boston.frame
+df = pd.read_csv('BostonHousing.csv')
 
 print("First 5 Rows:")
 print(df.head())

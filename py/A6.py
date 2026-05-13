@@ -5,7 +5,7 @@ from sklearn.naive_bayes import GaussianNB
 from sklearn.metrics import confusion_matrix
 
 # Load Dataset
-df = pd.read_csv(r"C:\Users\Keshav Kalani\Desktop\DSBDA\datasets\IRIS.csv")
+df = pd.read_csv("IRIS.csv")
 df.head()
 
 # Input and Output Variables

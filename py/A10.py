@@ -1,8 +1,9 @@
 import seaborn as sns
 import matplotlib.pyplot as plt
+import pandas as pd
 
 # Load Dataset
-iris = sns.load_dataset('iris')
+iris = pd.read_csv('IRIS.csv')
 
 # Display first 5 rows
 print(iris.head())
